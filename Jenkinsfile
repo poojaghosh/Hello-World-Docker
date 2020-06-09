@@ -1,8 +1,9 @@
 pipeline {
     agent any
     tools {
-        maven 'Maven-3'
+        maven 'Maven-2'
         jdk 'Java jdk'
+		docker 'Docker World'
     }
     stages {
         stage ('Initialize') {
@@ -14,11 +15,16 @@ pipeline {
             }
         }
 
-        stage ('Build') {
+        stage ('Build Maven') {
             steps {
                 //bat 'mvn -Dmaven.test.failure.ignore=true install' 
 				bat 'mvn clean package'
             }
           }
+		  stage ('Build Docker image'){
+		    steps {
+                bat 'docker build -t chika1984/myapp-0.0.1-SNAPSHOT:2.0.0 .'
+            }
+          }  
     }
 }
