@@ -1,5 +1,5 @@
 FROM openjdk:7
-COPY . /target/myapp-0.0.1-SNAPSHOT
-WORKDIR /target/myapp-0.0.1-SNAPSHOT
+COPY . /target/myapp-0.0.1-SNAPSHOT.war
+WORKDIR /target/myapp-0.0.1-SNAPSHOT.war
 RUN javac Main.java
-CMD ["java", "Main"]
+CMD ["java", "-jar", "myapp-0.0.1-SNAPSHOT.war"]
