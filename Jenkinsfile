@@ -22,8 +22,9 @@ pipeline {
           }
 		  stage ('Build Docker image'){
 		    steps { 
-                bat 'docker.build -t chika1984/myapp-0.0.1-SNAPSHOT:2.0.0 .'
-				
+			def myImg
+                //bat 'docker.build -t chika1984/myapp-0.0.1-SNAPSHOT:2.0.0 .'
+				myImg = docker.build 'myapp.war:snapshot'
             }
           }  
     }
