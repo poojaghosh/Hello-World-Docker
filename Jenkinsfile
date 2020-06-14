@@ -1,7 +1,6 @@
 pipeline {
     agent any
-    export PATH=$PATH:/usr/local/bin
-	tools {
+    tools {
         maven 'Maven-2'
         jdk 'Java jdk'
     }
