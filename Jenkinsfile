@@ -26,10 +26,12 @@ pipeline {
 		  agent{ docker { image 'myapp' }}
 		   
          steps {
+		 script
+		 {
 			docker build -t chika1984/piyush123/myapp:2.0.0 .
                //bat 'docker build -t chika1984/piyush123/myapp:2.0.0 .'
             }
-               
+          }     
 				
             }
           }
