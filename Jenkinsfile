@@ -1,6 +1,6 @@
 pipeline {
 //agent { dockerfile true}
-docker { image 'myapp' }
+agent {docker { image 'myapp' }}
     //agent any
     tools {
         maven 'Maven-2'
