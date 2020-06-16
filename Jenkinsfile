@@ -3,6 +3,7 @@ pipeline {
     tools {
         maven 'Maven-2'
         jdk 'Java jdk'
+		Docker 'docker'
     }
     stages {
         stage ('Initialize') {
@@ -21,7 +22,7 @@ pipeline {
             }
           }
 		   stage('Build Docker image') {
-            agent {
+            agent { Dockerfile true}
                 docker { image 'myapp' }
             }
             steps {
@@ -30,4 +31,3 @@ pipeline {
 				
             }
           }  
-    }
