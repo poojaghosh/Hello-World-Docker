@@ -26,8 +26,8 @@ pipeline {
 		  docker { image 'myapp' }
 		   
          steps {
-			docker build -t chika1984/piyush123/myapp:2.0.0 .
-               //bat 'docker build -t chika1984/piyush123/myapp:2.0.0 .'
+			//docker build -t 
+               bat 'docker build -t chika1984/piyush123/myapp:2.0.0 .'
             }     
 				
             }
