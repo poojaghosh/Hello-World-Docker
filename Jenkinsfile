@@ -22,8 +22,9 @@ pipeline {
             }
           }
 		  stage('Build Docker image') {
-		  
+		  agent{
 		  docker { image 'myapp' }
+		  }
 		   
          steps {
 			//docker build -t 
