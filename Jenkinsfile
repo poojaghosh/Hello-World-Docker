@@ -1,5 +1,6 @@
 pipeline {
-agent { dockerfile true}
+//agent { dockerfile true}
+docker { image 'myapp' }
     //agent any
     tools {
         maven 'Maven-2'
@@ -22,12 +23,12 @@ agent { dockerfile true}
             }
           }
 		   stage('Build Docker image') {
-            
-                docker { image 'myapp' }
-            }
             steps {
                 bat 'docker build -t chika1984/piyush123/myapp:2.0.0 .'
             }
+                
+            }
+            
 				
             }
           }  
