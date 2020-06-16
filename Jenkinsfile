@@ -20,11 +20,14 @@ pipeline {
 				bat 'mvn clean package'
             }
           }
-		  stage ('Build Docker image'){
-		    steps { 
-			   bat 'docker build -t chika1984/piyush123/myapp:2.0.0 .'
+		   stage('Build Docker image') {
+            agent {
+                docker { image 'myapp' }
+            }
+            steps {
+                bat 'node --version'
+            }
 				
             }
           }  
     }
-}
