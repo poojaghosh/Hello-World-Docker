@@ -1,5 +1,5 @@
 pipeline {
-agent { Dockerfile true}
+agent { dockerfile true}
     //agent any
     tools {
         maven 'Maven-2'
