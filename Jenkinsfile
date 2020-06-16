@@ -1,6 +1,6 @@
 pipeline {
-   // agent any
-   agent { dockerfile true}
+   agent any
+  // agent { dockerfile true}
     tools {
         maven 'Maven-2'
         jdk 'Java jdk'
