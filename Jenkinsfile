@@ -27,7 +27,7 @@ pipeline {
 		  }   
          steps {
 			 
-              bat ' docker build --tag chika1984/piyush123/myapp:2.0.0 .'
+              bat 'docker image build --tag chika1984/piyush123/myapp:2.0.0 .'
             }     
 				
             }
