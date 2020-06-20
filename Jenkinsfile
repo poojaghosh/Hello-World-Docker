@@ -22,7 +22,7 @@ pipeline {
             }
           }
 		  stage('Build Docker image') {
-		  agent{ Dockerfile true}
+		  agent{ dockerfile true}
 		  docker { image 'myapp' }
 		  
          //steps {
