@@ -22,7 +22,7 @@ pipeline {
             }
           }
 		  stage('Build Docker image') {
-		  docker { image 'myapp' }
+		  //docker { image 'myapp' }
 		  
          steps {
 			bat ('docker build -t chika1984/myapp:2.0.0 .')
@@ -30,4 +30,5 @@ pipeline {
 				
             
           }
-}		  
+}	
+}	  
