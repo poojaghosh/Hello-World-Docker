@@ -1,4 +1,5 @@
-FROM openjdk:7
-COPY . /target/myapp-*.war
+FROM scratch
+COPY . /target/*.war
 WORKDIR /target/myapp
-ENTRYPOINT ["%PATH%", "myapp"]
+RUN myapp
+CMD ["/hello"]
