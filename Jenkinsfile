@@ -11,8 +11,7 @@ pipeline {
                 bat '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
-					echo 'DOCKER_TOOLBOX_INSTALL_PATH = C:\Program Files\Docker Toolbox'
-                '''
+					'''
             }
         }
 
