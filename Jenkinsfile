@@ -28,6 +28,6 @@ pipeline {
 			bat ('docker build -t chika1984/myapp:2.0.0 .')
           }     
 				
-            }
+            
           }
 }		  
