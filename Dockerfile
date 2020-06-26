@@ -1,5 +1,5 @@
-FROM tomcat:7
+FROM tomcat:9
 MAINTAINER piyushsinha.cts@gmail.com
-ADD . /target/myapp-0.0.1-SNAPSHOT.war /target/myapp
-RUN ["rm", "-fr", "/target/webapp"]
-CMD ["catalina.bat", "run"]
+ADD . /target/myapp-*.war /usr/local/tomcat
+RUN ["rm", "-fr", "/usr/local/tomcat"]
+CMD ["catalina.sh", "run"]
