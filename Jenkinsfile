@@ -22,13 +22,12 @@ pipeline {
             }
           }
 		  stage('Build Docker image') {
-		  agent{
-		  docker { image 'myapp' }
-		  }
+		  agent{ dockerfile true }
+		  //docker { image 'myapp' }
+		  
          steps {
-			bat ('docker build -t chika1984/myapp:2.0.0 .')
-          }     
-				
+			bat ('docker build . -t chika1984/myapp:2.0.0')
+          } 		
             
           }
 }	
